@@ -1,33 +1,93 @@
 .App {
-  text-align: center;
-  padding: 2rem;
-}
-
-button {
-  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 1rem;
-  margin: 0.5rem;
-  cursor: pointer;
+  font-size: 1rem;
 }
 
-.suits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+h1, h2 {
+  margin-bottom: 0.5rem;
 }
 
-.ranks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.ranks button,
+.suits button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  font-size: 1.2rem;
 }
 
-button.suit {
-  color: white;
-  background-color: black;
-}
-
-button.suit.heart,
-button.suit.diamond {
+.suits .heart,
+.suits .diamond {
   color: red;
+}
+
+.big-text {
+  font-size: 1.5rem;
+  resize: none;
+}
+
+.section-container {
+  display: inline-block;
+  width: calc(33% - 2rem);
+  margin: 1rem;
+}
+
+.choices,
+.summary {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.choices-buttons,
+.summary-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.crib-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .App {
+    font-size: 0.8rem;
+  }
+
+  .section-container {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .ranks button,
+  .suits button {
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+  }
+
+  .big-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    font-size: 0.6rem;
+  }
+
+  .ranks button,
+  .suits button {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .big-text {
+    font-size: 1rem;
+  }
 }
